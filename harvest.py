@@ -75,7 +75,7 @@ def make_melon_type_lookup(melon_types):
 
     melon_dict = {}
     for melon_type in melon_types:
-        Melon_dict[melon_type.code] = melon_type
+        melon_dict[melon_type.code] = melon_type
 
     return melon_dict
 
@@ -109,9 +109,13 @@ class Melon(object):
 
 
 
-def make_melons(melon_types):
+def make_melons(all_melon_types):
     """Returns a list of Melon objects."""
     melon_list2 = []
+
+    melons_running = make_melon_type_lookup(melon_types)
+     #list from above
+    melons_running[melon.mtype]= mtype
 
     # Fill in the rest
     melon_1 = Melon("yw", 8, 7, 2, "Sheila") 
@@ -140,6 +144,10 @@ def get_sellability_report(melons):
     """Given a list of melon object, prints whether each one is sellable."""
 
     # Fill in the rest 
+    return
 
 
+all_melon_types = make_melon_types()
 
+
+make_melons(all_melon_types)
